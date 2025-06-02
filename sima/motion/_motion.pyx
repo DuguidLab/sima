@@ -9,9 +9,9 @@ import cython
 import numpy as np
 cimport numpy as np
 
-INT_TYPE = np.int
-FLOAT_TYPE = np.float
-ctypedef np.int_t INT_TYPE_t
+INT_TYPE = np.int64
+FLOAT_TYPE = np.float64
+ctypedef np.int64_t INT_TYPE_t
 ctypedef np.float_t FLOAT_TYPE_t
 
 

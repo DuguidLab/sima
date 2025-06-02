@@ -11,9 +11,9 @@ cimport numpy as np
 
 # from sima.misc import pairwise
 
-INT_TYPE = np.int
-FLOAT_TYPE = np.float
-ctypedef np.int_t INT_TYPE_t
+INT_TYPE = np.int64
+FLOAT_TYPE = np.float64
+ctypedef np.int64_t INT_TYPE_t
 ctypedef np.float_t FLOAT_TYPE_t
 
 def _fast_ocorr(dataset, np.ndarray[INT_TYPE_t, ndim=2] pixel_pairs, channel=0):
@@ -38,7 +38,7 @@ def _fast_ocorr(dataset, np.ndarray[INT_TYPE_t, ndim=2] pixel_pairs, channel=0):
             X = np.nan_to_num(frames[0][channel] - time_avg)
             Y = np.nan_to_num(frames[1][channel] - time_avg)
             if not frame_idx % 100:
-                print frame_idx
+                print(frame_idx)
             ostdevs += X * Y
             for pair_idx in range(num_pairs):
                 a0 = pixel_pairs[pair_idx, 0]

@@ -6,7 +6,7 @@ Version 1.3.2"""
 from sima.imaging import ImagingDataset
 from sima.sequence import Sequence
 
-from numpy.testing import Tester
-test = Tester().test
+import numpy.testing as testing
+test = testing.test
 
 __version__ = '1.3.2'

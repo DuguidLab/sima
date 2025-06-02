@@ -1,6 +1,6 @@
 from __future__ import absolute_import
-from numpy.testing import Tester
-test = Tester().test
+import numpy.testing as testing
+test = testing.test
 
 from .motion import MotionEstimationStrategy, ResonantCorrection
 from .frame_align import PlaneTranslation2D, VolumeTranslation

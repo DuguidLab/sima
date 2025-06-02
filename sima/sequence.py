@@ -622,13 +622,16 @@ class _Sequence_TIFF_Interleaved(Sequence):
     def __iter__(self):
         base_iter = self._iter_pages()
         while True:
-            yield np.concatenate(
-                [np.expand_dims(
-                    np.concatenate(
-                        [np.expand_dims(next(base_iter), 2).astype(float)
-                         for _ in range(self._num_channels)],
-                        axis=2), 0)
-                 for _ in range(self._num_planes)], 0)
+            try:
+                yield np.concatenate(
+                    [np.expand_dims(
+                        np.concatenate(
+                            [np.expand_dims(next(base_iter), 2).astype(float)
+                             for _ in range(self._num_channels)],
+                            axis=2), 0)
+                     for _ in range(self._num_planes)], 0)
+            except StopIteration:
+                return
 
     def _get_frame(self, n):
         images = Image.open(self._path, 'r')
