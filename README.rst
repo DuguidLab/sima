@@ -1,19 +1,7 @@
-.. image:: https://travis-ci.org/losonczylab/sima.svg?branch=master
-   :target: https://travis-ci.org/losonczylab/sima/
+This fork attempts to provide a Python3.12-compatible version of SIMA.
+Not all features are tested and only the motion detection is the focus of this fork.
 
-.. image:: https://ci.appveyor.com/api/projects/status/q3bgxcoget1xef33/branch/master?svg=true
-   :target: https://ci.appveyor.com/project/nbdanielson/sima
-
-.. image:: https://coveralls.io/repos/losonczylab/sima/badge.png 
-   :target: https://coveralls.io/r/losonczylab/sima 
-
-.. image:: https://badges.gitter.im/Join%20Chat.svg
-   :alt: Join the chat at https://gitter.im/losonczylab/sima
-   :target: https://gitter.im/losonczylab/sima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-
-.. Removed until the docs are building properly
-    .. image:: https://readthedocs.org/projects/sima/badge/?version=latest
-       :target: https://sima.readthedocs.org/en/latest/
+The fixes applied here are thanks to `this <https://github.com/neurodroid/sima/tree/py3>`_ other fork, and personal trial-and-error.
 
 Overview
 --------
