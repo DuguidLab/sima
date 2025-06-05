@@ -390,8 +390,8 @@ def _make_mean_img(frames, num_images_for_mean=100, randomise_frames=True,
             results = map(map_function, frames_for_mean)
 
         # preallocate the results array
-        mean_img_dx = np.zeros(num_images_for_mean, dtype=np.float)
-        mean_img_dy = np.zeros(num_images_for_mean, dtype=np.float)
+        mean_img_dx = np.zeros(num_images_for_mean, dtype=float)
+        mean_img_dy = np.zeros(num_images_for_mean, dtype=float)
 
         # get results (0: dy, 1: dx, 2: registered image)
         for idx, result in enumerate(results):
@@ -450,8 +450,8 @@ def _register_all_frames(frames, mean_img, upsample_factor=1,
         results = map(map_function, frames)
 
     # preallocate arrays
-    dx = np.zeros(input_shape[0], dtype=np.float)
-    dy = np.zeros(input_shape[0], dtype=np.float)
+    dx = np.zeros(input_shape[0], dtype=float)
+    dy = np.zeros(input_shape[0], dtype=float)
 
     if return_registered:
         registered_frames = np.zeros([input_shape[0], input_shape[1],
