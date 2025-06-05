@@ -532,7 +532,7 @@ class Sequence(with_metaclass(ABCMeta, object)):
         elif fmt == 'HDF5':
             if not h5py_available:
                 raise ImportError('h5py >= 2.2.1 required')
-            f = h5py.File(filenames, 'w')
+            f = h5py.File(filenames, 'a', locking=False)
             f.create_dataset(
                 name='imaging', shape=self.shape, dtype='float32',
                 chunks=(1, 1, self.shape[2], self.shape[3], 1),
@@ -794,7 +794,7 @@ class _Sequence_HDF5(Sequence):
         if not h5py_available:
             raise ImportError('h5py >= 2.2.1 required')
         self._path = abspath(path)
-        self._file = h5py.File(path, 'r')
+        self._file = h5py.File(path, 'a', locking=False)
         if group is None:
             group = '/'
         self._group = self._file[group]
