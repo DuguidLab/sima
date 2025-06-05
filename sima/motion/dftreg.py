@@ -670,8 +670,8 @@ def _register_translation(src_image, target_image, upsample_factor=1,
         target_freq = target_image
     # real data needs to be fft'd.
     elif space.lower() == 'real':
-        src_image = np.array(src_image, dtype=np.complex128, copy=False)
-        target_image = np.array(target_image, dtype=np.complex128, copy=False)
+        src_image = np.asarray(src_image, dtype=np.complex128)
+        target_image = np.asarray(target_image, dtype=np.complex128)
         src_freq = fftn(src_image)
         target_freq = fftn(target_image)
     else:
