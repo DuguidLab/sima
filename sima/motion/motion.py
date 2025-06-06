@@ -108,6 +108,8 @@ class MotionEstimationStrategy(with_metaclass(abc.ABCMeta, object)):
         -------
         dataset : sima.ImagingDataset
             The motion-corrected dataset.
+        displacements : list[np.ndarray]
+            A list of numpy arrays of integer displacements.
 
         """
 
@@ -139,7 +141,7 @@ class MotionEstimationStrategy(with_metaclass(abc.ABCMeta, object)):
         corrected_sequences = [
             s[:, planes, rows, columns] for s in corrected_sequences]
         return sima.ImagingDataset(
-            corrected_sequences, savedir, channel_names=channel_names)
+            corrected_sequences, savedir, channel_names=channel_names), displacements
 
 
 class ResonantCorrection(MotionEstimationStrategy):
