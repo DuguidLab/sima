@@ -83,6 +83,7 @@ Topic :: Scientific/Engineering
 setup(
     name="sima",
     version="1.3.2",
+    python_requires='>=3.12',
     packages=['sima',
               'sima.misc',
               'sima.motion',
