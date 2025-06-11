@@ -29,7 +29,7 @@ if (any('--' + opt in sys.argv for opt in
         'clean' in sys.argv):
     setup_requires = []
 else:
-    setup_requires = ['numpy']
+    setup_requires = ['Cython', 'numpy']
 
 
 # --- Encapsulate NumPy imports in a specialized Extension type ---------------
