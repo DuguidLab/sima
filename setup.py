@@ -103,6 +103,7 @@ setup(
         'scikit-learn>=0.11',
         'pillow>=2.6.1',
         'future>=0.14',
+        'setuptools',
     ],
     package_data={
         'sima': [
