@@ -81,8 +81,8 @@ Topic :: Scientific/Engineering
 
 """
 setup(
-    name="sima",
-    version="1.3.2",
+    name="duguidlab-motion-correction",
+    version="2.0.0",
     python_requires='>=3.12',
     packages=['sima',
               'sima.misc',
