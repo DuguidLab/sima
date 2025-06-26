@@ -331,7 +331,7 @@ def _offset_corrs(dataset, pixel_pairs, channel=0, method='EM',
 
 class BasicAffinityMatrix(AffinityMatrixMethod):
 
-    """Return a sparse affinity matrix for use with normalized cuts.
+    r"""Return a sparse affinity matrix for use with normalized cuts.
 
     The affinity :math:`A_{ij}` between each pair of pixels :math:`i,j` is a
     function of the correlation :math:`c_{i,j}` of the pixel-intensity time

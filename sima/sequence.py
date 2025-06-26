@@ -1466,7 +1466,7 @@ def _resolve_paths(d, savedir):
                     '%s'
                     'Enter the selected path and press ENTER: ') % \
                     ''.join('  ' + p + '\n' for p in paths)
-        if len(valid_paths) is not 1:
+        if len(valid_paths) != 1:
             while True:
                 input_path = input(error_msg)
                 if isfile(input_path):

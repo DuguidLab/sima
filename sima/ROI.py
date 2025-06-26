@@ -392,7 +392,7 @@ class ROIList(list):
 
             rois = []
             for filename in files:
-                label = re.findall('\d+', filename)[-1]
+                label = re.findall(r'\d+', filename)[-1]
                 data = scipy.io.loadmat(filename)
                 # this is the ROI mask index in Mosiac 1.0.0b
                 mask = data['Object'][0][0][11]

@@ -220,7 +220,7 @@ def _save_extract_summary(signals, save_directory, rois):
             signals['timestamp'], save_directory, str(plane_idx))
         if 'text.usetex' in mpl.rcParams.keys() and \
            mpl.rcParams['text.usetex']:
-            figtitle = figtitle.replace('\\', '\\\\').replace('_', '\_')
+            figtitle = figtitle.replace('\\', '\\\\').replace('_', r'\_')
 
         ax.set_title(figtitle)
 
