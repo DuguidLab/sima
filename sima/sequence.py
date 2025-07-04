@@ -39,7 +39,7 @@ from future.utils import with_metaclass
 import itertools as it
 import glob
 import warnings
-from distutils.version import StrictVersion
+from packaging.version import Version
 from os.path import (abspath, dirname, join, normpath, normcase, isfile,
                      relpath)
 import filecmp
@@ -64,7 +64,7 @@ try:
 except ImportError:
     h5py_available = False
 else:
-    h5py_available = StrictVersion(h5py.__version__) >= StrictVersion('2.2.1')
+    h5py_available = Version(h5py.__version__) >= Version('2.2.1')
 
 import sima.misc
 from sima.motion._motion import _align_frame

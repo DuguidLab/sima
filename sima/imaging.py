@@ -16,7 +16,7 @@ import os
 import csv
 from os.path import dirname, join, abspath
 import pickle as pickle
-from distutils.version import StrictVersion
+from packaging.version import Version
 
 import numpy as np
 try:
@@ -24,7 +24,7 @@ try:
 except ImportError:
     h5py_available = False
 else:
-    h5py_available = StrictVersion(h5py.__version__) >= StrictVersion('2.2.1')
+    h5py_available = Version(h5py.__version__) >= Version('2.2.1')
 
 import sima
 import sima.misc

@@ -36,7 +36,7 @@ from builtins import map, range
 from functools import partial
 import multiprocessing
 import numpy as np
-from scipy.ndimage.interpolation import shift
+from scipy.ndimage import shift
 from scipy.ndimage import laplace
 from scipy.ndimage import gaussian_filter
 import time
